@@ -5,41 +5,42 @@ This directory is used to store downloaded LinkedIn profile data files.
 ## Directory Structure
 ```
 linkedin_profiles/
-├── founders/        # Founder profiles
-├── mentors/         # Mentor profiles
+├── *.json           # Profile data files
 └── README.md        # This file
 ```
 
 ## File Format
-Each profile should be stored as a JSON file with the following structure:
+Each profile is stored as a JSON file with the following naming convention: `username_YYYY_MM_DD.json`
+
+The JSON structure includes:
 ```json
 {
-    "id": "linkedin-profile-id",
-    "fullName": "Full Name",
+    "profile_url": "https://www.linkedin.com/in/username",
+    "full_name": "Full Name",
     "headline": "Professional Headline",
     "summary": "Profile Summary",
-    "currentCompany": "Current Company Name",
-    "industry": "Industry",
-    "location": "Location",
-    "experience": [
+    "experiences": [
         {
             "title": "Job Title",
             "company": "Company Name",
-            "description": "Job Description",
-            "startDate": "Start Date",
-            "endDate": "End Date"
+            "description": "Role Description",
+            "start_date": "YYYY-MM",
+            "end_date": "YYYY-MM"
         }
     ],
-    "skills": ["Skill 1", "Skill 2", "Skill 3"],
     "education": [
         {
             "school": "School Name",
             "degree": "Degree Name",
             "field": "Field of Study",
-            "startDate": "Start Date",
-            "endDate": "End Date"
+            "start_date": "YYYY",
+            "end_date": "YYYY"
         }
-    ]
+    ],
+    "skills": ["Skill 1", "Skill 2"],
+    "interests": ["Interest 1", "Interest 2"],
+    "accomplishments": ["Accomplishment 1", "Accomplishment 2"],
+    "recommendations": ["Recommendation 1", "Recommendation 2"]
 }
 ```
 
