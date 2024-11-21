@@ -10,38 +10,107 @@ linkedin_profiles/
 ```
 
 ## File Format
-Each profile is stored as a JSON file with the following naming convention: `username_YYYY_MM_DD.json`
+Each file contains a list of LinkedIn profiles and follows the naming convention: `username_YYYY_MM_DD.json`
 
 The JSON structure includes:
 ```json
-{
-    "profile_url": "https://www.linkedin.com/in/username",
-    "full_name": "Full Name",
-    "headline": "Professional Headline",
-    "summary": "Profile Summary",
-    "experiences": [
-        {
-            "title": "Job Title",
-            "company": "Company Name",
-            "description": "Role Description",
-            "start_date": "YYYY-MM",
-            "end_date": "YYYY-MM"
-        }
-    ],
-    "education": [
-        {
-            "school": "School Name",
-            "degree": "Degree Name",
-            "field": "Field of Study",
-            "start_date": "YYYY",
-            "end_date": "YYYY"
-        }
-    ],
-    "skills": ["Skill 1", "Skill 2"],
-    "interests": ["Interest 1", "Interest 2"],
-    "accomplishments": ["Accomplishment 1", "Accomplishment 2"],
-    "recommendations": ["Recommendation 1", "Recommendation 2"]
-}
+[
+    {
+        "general": {
+            "imgUrl": "URL to profile image",
+            "profileUrl": "https://www.linkedin.com/in/username",
+            "connectionDegree": "1st/2nd/3rd",
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "fullName": "Full Name",
+            "location": "City, State, Country",
+            "headline": "Professional Headline",
+            "backgroundUrl": "URL to background image",
+            "userId": "LinkedIn User ID",
+            "vmid": "LinkedIn VMID"
+        },
+        "jobs": [
+            {
+                "companyUrl": "URL to company profile",
+                "companyName": "Company Name",
+                "logoUrl": "URL to company logo",
+                "jobTitle": "Job Title",
+                "dateRange": "Employment Date Range",
+                "description": "Job Description",
+                "location": "Job Location"
+            }
+        ],
+        "schools": [
+            {
+                "schoolUrl": "URL to school profile",
+                "schoolName": "School Name",
+                "logoUrl": "URL to school logo",
+                "degree": "Degree Name",
+                "field": "Field of Study",
+                "dateRange": "Education Date Range"
+            }
+        ],
+        "skills": [
+            {
+                "name": "Skill Name",
+                "endorsements": 0
+            }
+        ],
+        "interests": {
+            "influencers": [
+                {
+                    "url": "URL to influencer profile",
+                    "name": "Influencer Name"
+                }
+            ],
+            "companies": [
+                {
+                    "url": "URL to company profile",
+                    "name": "Company Name",
+                    "count": "Follower Count"
+                }
+            ],
+            "groups": [
+                {
+                    "url": "URL to group",
+                    "name": "Group Name",
+                    "count": "Member Count"
+                }
+            ],
+            "schools": [
+                {
+                    "url": "URL to school profile",
+                    "name": "School Name",
+                    "count": "Follower Count"
+                }
+            ]
+        },
+        "accomplishments": {
+            "courses": ["Course 1", "Course 2"],
+            "languages": ["Language 1", "Language 2"]
+        },
+        "recommendations": {
+            "receivedRecommendations": [
+                {
+                    "profileUrl": "URL to recommender profile",
+                    "text": "Recommendation text"
+                }
+            ],
+            "givenRecommendations": [
+                {
+                    "profileUrl": "URL to recipient profile",
+                    "text": "Recommendation text"
+                }
+            ]
+        },
+        "licences": [
+            {
+                "name": "License Name",
+                "credentialUrl": "URL to credential"
+            }
+        ]
+    }
+]
 ```
 
 ## Usage
