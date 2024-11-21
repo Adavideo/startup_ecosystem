@@ -22,6 +22,8 @@ wheels/
 
 # SQLite database
 *.db
+*.sqlite
+*.sqlite3
 
 # Virtual Environment
 venv/
